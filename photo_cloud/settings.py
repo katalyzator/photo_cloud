@@ -113,6 +113,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+JET_DEFAULT_THEME = 'green'
+
+JET_SIDE_MENU_COMPACT = True
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
