@@ -10,7 +10,8 @@ def get_password(request):
 
         folder = Folder.objects.get(password=password)
 
-        return JsonResponse(dict(result=str(folder.id)))
+        return JsonResponse(dict(result=folder.id))
 
     except:
-        return "Something went wrong"
+
+        return JsonResponse(dict(result="Something went wrong"))
