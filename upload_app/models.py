@@ -12,6 +12,7 @@ class Folder(models.Model):
         verbose_name = 'Главный альбом'
 
     name = models.CharField(max_length=255, verbose_name='Наименование')
+    login = models.CharField(max_length=255, verbose_name='Login')
     password = models.CharField(max_length=255, verbose_name='Код для альбома')
 
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False, verbose_name='Дата создания')

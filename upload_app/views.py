@@ -7,8 +7,9 @@ from .models import *
 def get_password(request):
     try:
         password = request.GET.get('password')
+        login = request.GET.get('login')
 
-        folder = Folder.objects.get(password=password)
+        folder = Folder.objects.get(password=password, login=login)
         return JsonResponse(dict(result=folder.id))
 
     except:
